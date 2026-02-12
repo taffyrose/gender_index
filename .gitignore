@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Outputs (generated files — keep directories, ignore contents)
+outputs/*
+!outputs/.gitkeep
+shapefiles/*
+!shapefiles/.gitkeep
+data/*
+!data/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
