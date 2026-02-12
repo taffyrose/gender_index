@@ -267,8 +267,9 @@ with tab_rank:
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 with tab_pillar:
     st.subheader("Pillar Heatmap — Normalized Scores")
-    heat_data = disp.set_index("Country")[NORM_COLS].sort_values(
-        "GVI_Score" if "GVI_Score" in disp.columns else NORM_COLS[0]
+    heat_data = (
+        disp.sort_values("GVI_Score")
+            .set_index("Country")[NORM_COLS]
     )
     heat_data.columns = PILLAR_COLS
 
